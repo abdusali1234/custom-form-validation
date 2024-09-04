@@ -46,7 +46,7 @@ passWord.addEventListener("input", (event) => {
 });
 
 confirmPassWord.addEventListener("input", (event) => {
-    if (confirmPassWord === passWord){
+    if (confirmPassWord.value === passWord.value){
         confirmPassWord.setCustomValidity("");
     } else {
         showConfirmPassWordError();
@@ -116,7 +116,7 @@ function showPassWordError() {
 }
 
 function showConfirmPassWordError() {
-    if (confirmPassWord !== passWord){
+    if (confirmPassWord.value !== passWord.value){
         confirmPassWord.setCustomValidity("Doesn't match password")
     } else {
         confirmPassWord.setCustomValidity("");
