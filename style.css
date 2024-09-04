@@ -71,11 +71,22 @@ select {
     width: 15rem;
 }
 
-input:invalid {
+input:invalid, select:invalid {
     border-color: #900;
     background-color: #fdd;
 }
 
 input:focus:invalid {
   outline: none;
+}
+
+input:valid, select:valid {
+    border-color: rgb(26, 134, 2);
+    background-color: rgb(139, 248, 115);
+}
+
+#submit-btn {
+    border: black 2px solid;
+    background-color: transparent;
+    
 }

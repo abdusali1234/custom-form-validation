@@ -17,9 +17,10 @@
         <fieldset>
             <legend>Address</legend>
             <section>
-                <label for="country">Select Country: </label>
-                <select id="country" name="country">
-                    <option value="">Select Country</option>
+                <span>Select Country: </span>
+                <strong><span aria-label="required">*</span></strong>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select Country</option>
                     <option value="['Nigeria','NG']">Nigeria</option>
                     <option value="['Afghanistan','AF']">Afghanistan</option>
                     <option value="['Åland Islands','AX']">Åland Islands</option>
@@ -276,7 +277,7 @@
                     <span>Post (Zip) Code: </span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="text" id="post-code" name="post-code">
+                <input type="text" id="post-code" name="post-code" required>
             </section>
         </fieldset>
         <fieldset>
@@ -286,14 +287,14 @@
                     <span>Password: </span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="password" id="pwd" name="pwd">
+                <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be at least 8 characters in length, and contain at least 1 number, 1 uppercase letter, and one lowercase letter" required>
             </section>
             <section>
                 <label for="confirm-pwd">
                     <span>Confirm password: </span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="password" id="confirm-pwd" name="confirm-pwd">
+                <input type="password" id="confirm-pwd" name="confirm-pwd" required>
             </section>
         </fieldset>
         <input type="submit" value="Submit" id="submit-btn">
